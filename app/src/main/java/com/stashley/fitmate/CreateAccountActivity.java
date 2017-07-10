@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.google.firebase.auth.FirebaseAuth;
 
 import butterknife.Bind;
+import butterknife.ButterKnife;
 
 public class CreateAccountActivity extends AppCompatActivity {
     public static final String TAG = CreateAccountActivity.class.getSimpleName();
@@ -30,5 +31,7 @@ public class CreateAccountActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_account);
+
+        ButterKnife.bind(this);
     }
 }
