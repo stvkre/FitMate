@@ -36,4 +36,18 @@ public class CreateAccountActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
     }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthListener);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (mAuthListener != null) {
+            mAuth.removeAuthStateListener(mAuthListener);
+        }
+    }
 }
