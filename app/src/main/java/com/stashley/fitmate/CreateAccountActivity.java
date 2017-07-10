@@ -171,4 +171,15 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
         return true;
     }
 
+    private boolean isValidPassword(String password, String confirmPassword) {
+        if (password.length() < 6) {
+            mPasswordEditText.setError("Please create a password containing at least 6 characters");
+            return false;
+        } else if (!password.equals(confirmPassword)) {
+            mPasswordEditText.setError("Passwords do not match");
+            return false;
+        }
+        return true;
+    }
+
 }
