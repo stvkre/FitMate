@@ -163,4 +163,12 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
         return isGoodEmail;
     }
 
+    private boolean isValidName(String name) {
+        if (name.equals("")) {
+            mNameEditText.setError("Please enter your name");
+            return false;
+        }
+        return true;
+    }
+
 }
