@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "452559607017",
+    "firebase_url": "https://fitmate-98d6a.firebaseio.com",
+    "project_id": "fitmate-98d6a",
+    "storage_bucket": "fitmate-98d6a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:452559607017:android:b7f8089056bd2318",
+        "android_client_info": {
+          "package_name": "com.stashley.fitmate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "452559607017-6q0ckeb0flsbp921u786d702ju3mtjhq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.stashley.fitmate",
+            "certificate_hash": "2c95815069b4d06781e6b2423d6b399aaac469cd"
+          }
+        },
+        {
+          "client_id": "452559607017-vd3hbmp4cjd5u4a292vr2v9atsupo6hi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhazNvZeT8E9cCSNLGlHQ9aIhc-7BdWGg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "452559607017-vd3hbmp4cjd5u4a292vr2v9atsupo6hi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
