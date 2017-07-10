@@ -78,7 +78,7 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
         }
 
         if (view == mCreateUserButton) {
-//            createNewUser();
+            createNewUser();
         }
 
     }
