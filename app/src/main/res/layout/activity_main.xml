@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.stashley.fitmate.MainActivity">
+    tools:context="com.stashley.fitmate.MainActivity"
+    android:id="@+id/drawerLayout">
 
     <LinearLayout
     android:layout_width="match_parent"
