@@ -2,4 +2,5 @@
     <string name="app_name">Fitmate</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="header">Welcome to FitMate</string>
 </resources>
