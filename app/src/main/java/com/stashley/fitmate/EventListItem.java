@@ -6,5 +6,8 @@ package com.stashley.fitmate;
 
 public class EventListItem {
 
+    private String head;
+    private String description;
+
 
 }
