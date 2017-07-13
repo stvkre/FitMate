@@ -2,13 +2,37 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.stashley.fitmate">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
+        android:name=".App"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <!--Blog stuff-->
+        <activity android:name=".activities.PostListActivity"></activity>
+        <activity android:name=".activities.PostActivity"/>
+        <activity
+            android:name=".activities.LinkRouterActivity"
+            android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="@string/url_intercept_schema"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.AboutActivity"
+            android:screenOrientation="sensorPortrait"/>
+
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".CreateAccountActivity" />
         <activity android:name=".LoginActivity">

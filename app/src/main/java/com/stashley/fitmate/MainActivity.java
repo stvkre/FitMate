@@ -8,6 +8,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.stashley.fitmate.activities.PostListActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,7 +28,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-
+        if (id == R.id.action_blog) {
+            Intent intent = new Intent(MainActivity.this, PostListActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
+            return true;
+        }
         if (id == R.id.action_logout) {
             logout();
             return true;

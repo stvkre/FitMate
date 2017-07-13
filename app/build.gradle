@@ -1,15 +1,20 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
 
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.3"
 
     repositories {
+        maven {
+        url "https://s3.amazonaws.com/repo.commonsware.com"
+    }
         mavenCentral()
         jcenter()
     }
 
     packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
         exclude 'META-INF/DEPENDENCIES.txt'
         exclude 'META-INF/DEPENDENCIES'
         exclude 'META-INF/dependencies.txt'
@@ -58,6 +63,14 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
     apt 'org.parceler:parceler:1.1.6'
+//    Blog dependencies
+    compile 'com.google.auto.value:auto-value:1.0'
+    compile 'javax.annotation:jsr250-api:1.0'
+    compile 'joda-time:joda-time:2.7'
+    compile 'com.commonsware.cwac:anddown:0.3.0'
+
+    compile 'com.contentful.vault:core:0.9.7'
+    apt 'com.contentful.vault:compiler:0.9.7'
 }
 
 apply plugin: 'com.google.gms.google-services'
