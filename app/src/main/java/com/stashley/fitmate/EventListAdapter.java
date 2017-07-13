@@ -16,10 +16,11 @@ import java.util.List;
 
 public class EventListAdapter extends RecyclerView.Adapter<EventListAdapter.ViewHolder>{
 
-    private List<LauncherActivity.ListItem> eventListItems;
+//    private List<LauncherActivity.ListItem> eventListItems;
+    private List<EventListItem> eventListItems;
     private Context context;
 
-    public EventListAdapter(List<LauncherActivity.ListItem> eventListItems, Context context) {
+    public EventListAdapter(List<EventListItem> eventListItems, Context context) {
         this.eventListItems = eventListItems;
         this.context = context;
     }
@@ -36,10 +37,10 @@ public class EventListAdapter extends RecyclerView.Adapter<EventListAdapter.View
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
 
-        LauncherActivity.ListItem listItem = eventListItems.get(position);
+        EventListItem listItem = eventListItems.get(position);
 
-//        holder.textViewHead.setText(listItem.getHead());
-//        holder.textViewDescription.setText(listItem.getDescription());
+        holder.textViewHead.setText(listItem.getHead());
+        holder.textViewDescription.setText(listItem.getDescription());
 
     }
 
