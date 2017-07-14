@@ -1,16 +1,20 @@
 package com.stashley.fitmate;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.stashley.fitmate.activities.PostListActivity;
 
+import butterknife.Bind;
+
 public class MainActivity extends AppCompatActivity {
+    @Bind(R.id.createEventButton) Button mCreateEventButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
