@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
         public EventViewHolder(View itemView) {
             super(itemView);
 
-            itemView = mView;
+            mView = itemView;
         }
 
         // setting variable to place holders
