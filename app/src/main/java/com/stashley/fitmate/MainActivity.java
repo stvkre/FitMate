@@ -23,10 +23,16 @@ public class MainActivity extends AppCompatActivity {
 
     private List<EventListItem> eventListItems;
 
+    private RecyclerView mEvent_list;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mEvent_list = (RecyclerView) findViewById(R.id.event_list);
+        mEvent_list.setHasFixedSize(true);
+        mEvent_list.setLayoutManager(new LinearLayoutManager(this));
 
 
 //        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
