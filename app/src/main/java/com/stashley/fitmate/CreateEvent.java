@@ -85,12 +85,14 @@ public class CreateEvent extends AppCompatActivity {
         // progress message to show upload status
 
         mProgress.setMessage("Posting to Events...");
-        mProgress.show();
+
 
         String title_val = mCreateEventTitle.getText().toString().trim();
         String desc_val = mCreateEventDesc.getText().toString().trim();
 
         if (!TextUtils.isEmpty(title_val) && !TextUtils.isEmpty(desc_val) && mImageUri !=null){
+
+            mProgress.show();
 
             StorageReference filepath = mStorage.child("Event_Images").child(mImageUri.getLastPathSegment());
             filepath.putFile(mImageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {

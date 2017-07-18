@@ -1,6 +1,7 @@
 package com.stashley.fitmate;
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -11,12 +12,14 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -91,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
                 viewHolder.setDate(model.getDate());
                 viewHolder.setDescription(model.getDescription());
                 viewHolder.setLocation(model.getLocation());
+                viewHolder.setImage(getApplicationContext(), model.getImage());
 
             }
         };
@@ -128,6 +132,12 @@ public class MainActivity extends AppCompatActivity {
         public void setDate (String date) {
             TextView event_date = (TextView) mView.findViewById(R.id.event_Date);
             event_date.setText(date);
+        }
+
+        public void setImage(Context ctx,String image) {
+            ImageView event_image = (ImageView) mView.findViewById(R.id.event_image);
+            Picasso.with(ctx).load(image).into(event_image);
+
         }
     }
 
