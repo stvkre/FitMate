@@ -139,15 +139,9 @@ public class MainActivity extends AppCompatActivity {
         public void setImage(Context ctx,String image) {
             ImageView event_image = (ImageView) mView.findViewById(R.id.event_image);
             Picasso.with(ctx).load(image).into(event_image);
-
-            event_image.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                Log.v("Toast Click listener","");
-                }
-            });
-
         }
+
+
 
     }
 
