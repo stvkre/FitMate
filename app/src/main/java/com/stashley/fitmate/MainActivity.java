@@ -9,11 +9,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -138,7 +140,15 @@ public class MainActivity extends AppCompatActivity {
             ImageView event_image = (ImageView) mView.findViewById(R.id.event_image);
             Picasso.with(ctx).load(image).into(event_image);
 
+            event_image.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                Log.v("Toast Click listener","");
+                }
+            });
+
         }
+
     }
 
     @Override
