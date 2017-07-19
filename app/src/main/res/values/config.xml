@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- URL Interception -->
+  <string name="url_intercept_schema">fitmate-blog</string>
+</resources>

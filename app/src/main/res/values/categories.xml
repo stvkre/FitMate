@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="categories_array">
+        <item>Aerobics</item>
+        <item>Aqua Aerobics</item>
+        <item>Badminton</item>
+        <item>Basketball</item>
+        <item>Capoeira</item>
+        <item>Cycling</item>
+        <item>Dance</item>
+        <item>Football</item>
+        <item>Hiking/Mountain Climbing</item>
+        <item>Hockey</item>
+        <item>Kickboxing</item>
+        <item>Lawn Tennis</item>
+        <item>Martial Arts</item>
+        <item>Other</item>
+        <item>Pilates</item>
+        <item>Running</item>
+        <item>Squash</item>
+        <item>Swimming</item>
+        <item>Table Tennis</item>
+        <item>Volleyball</item>
+        <item>Walking</item>
+        <item>Yoga</item>
+    </string-array>
+</resources>

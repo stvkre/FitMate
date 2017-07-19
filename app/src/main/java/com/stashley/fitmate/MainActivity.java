@@ -3,10 +3,10 @@ package com.stashley.fitmate;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
@@ -15,15 +15,12 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
-
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
-
-
-import java.util.List;
+import com.stashley.fitmate.activities.PostListActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -56,13 +53,6 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (mToggle.onOptionsItemSelected(item)) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-        }
 
         // end drawer activity
 
@@ -142,11 +132,33 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
+        if (mToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
         if (item.getItemId() == R.id.action_add) {
             startActivity(new Intent(MainActivity.this, CreateEvent.class));
         }
+        int id = item.getItemId();
+        if (id == R.id.action_blog) {
+            Intent intent = new Intent(MainActivity.this, PostListActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
+            return true;
+        }
+        if (id == R.id.action_logout) {
+            logout();
+            return true;
+        }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void logout() {
+        FirebaseAuth.getInstance().signOut();
+        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        finish();
     }
 }
 

@@ -7,6 +7,11 @@
         android:title="Add Post"
         app:showAsAction="always"/>
     <item
+        android:id="@+id/action_blog"
+        android:title="Blog"
+        android:visible="true"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/action_logout"
         android:title="Logout"
         android:visible="true"
