@@ -39,7 +39,7 @@ public class EventListAdapter extends RecyclerView.Adapter<EventListAdapter.View
 
         EventListItem listItem = eventListItems.get(position);
 
-        holder.textViewHead.setText(listItem.getHead());
+        holder.textViewHead.setText(listItem.getTitle());
         holder.textViewDescription.setText(listItem.getDescription());
 
     }
