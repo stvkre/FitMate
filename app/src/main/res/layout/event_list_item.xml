@@ -18,7 +18,7 @@
             android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/textViewDescription"
-            android:text="Find yourself a partner and start working out"
+            android:text="Find yourself an event and start working out"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
