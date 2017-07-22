@@ -9,13 +9,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -23,7 +22,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -49,15 +48,15 @@ public class MainActivity extends AppCompatActivity {
         mEvent_list.setLayoutManager(new LinearLayoutManager(this));
 
 
-//        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
-//        mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
-//
-//        mDrawerLayout.addDrawerListener(mToggle);
-//        mToggle.syncState();
-//
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//
-//
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+        mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
+
+        mDrawerLayout.addDrawerListener(mToggle);
+        mToggle.syncState();
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
 //        eventListItems = new ArrayList<>();
 //
 //        for(int i = 0; i<=10; i++) {
@@ -104,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
         mEvent_list.setAdapter(firebaseRecyclerAdapter);
     }
 
-    public static class EventViewHolder extends RecyclerView.ViewHolder {
+    public class EventViewHolder extends RecyclerView.ViewHolder {
 
         View mView;
 
@@ -139,6 +138,7 @@ public class MainActivity extends AppCompatActivity {
         public void setImage(Context ctx,String image) {
             ImageView event_image = (ImageView) mView.findViewById(R.id.event_image);
             Picasso.with(ctx).load(image).into(event_image);
+
         }
 
 
