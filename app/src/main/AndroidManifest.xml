@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.stashley.fitmate">
 
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -10,9 +11,10 @@
     <meta-data android:name="com.facebook.accountkit.ApplicationName"
         android:value="@string/app_name" />
     <meta-data android:name="com.facebook.sdk.ApplicationId"
-        android:value="@string/FACEBOOK_APP_ID" />
+        android:value="@string/app_id"
+        tools:ignore="ManifestResource"/>
     <meta-data android:name="com.facebook.accountkit.ClientToken"
-        android:value="@string/ACCOUNT_KIT_CLIENT_TOKEN" />
+        android:value="@string/client_token" />
     <!--End of AccountKit requirements-->
 
     <application
@@ -55,8 +57,9 @@
                 android:value="com.stashley.fitmate.MainActivity" />
         </activity>
         <activity android:name=".CreateAccountActivity" />
-        <activity android:name=".LoginActivity">
-
+        <activity
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:name=".LoginActivity">
         </activity>
         <activity android:name=".SplashActivity"
             android:theme="@style/SplashTheme">
