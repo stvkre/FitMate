@@ -14,4 +14,7 @@
         <item name="android:windowBackground">@drawable/splash_background</item>
     </style>
 
+    <!--Account Kit theme-->
+    <style name="AppLoginTheme" parent="Theme.AccountKit" />
+
 </resources>
