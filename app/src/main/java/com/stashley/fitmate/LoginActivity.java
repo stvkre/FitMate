@@ -12,6 +12,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -124,5 +126,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     }
                 });
 
+    }
+
+//    Checking if phone has google play services installed for Facebook Login
+    private boolean isGooglePlayServicesAvailable() {
+        final GoogleApiAvailability apiAvailability = GoogleApiAvailability.getInstance();
+        int googlePlayServicesAvailable = apiAvailability.isGooglePlayServicesAvailable(this);
+        return googlePlayServicesAvailable == ConnectionResult.SUCCESS;
     }
 }

@@ -80,6 +80,9 @@ dependencies {
     compile 'com.contentful.vault:core:0.9.7'
     compile 'javax.annotation:jsr250-api:1.0'
     apt 'com.contentful.vault:compiler:0.9.7'
+
+//    AccountKit Login
+    compile 'com.facebook.android:account-kit-sdk:4.+'
 }
 
 apply plugin: 'com.google.gms.google-services'
