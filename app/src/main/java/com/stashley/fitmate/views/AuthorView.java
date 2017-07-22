@@ -8,9 +8,9 @@ import android.widget.TextView;
 
 import com.contentful.vault.Asset;
 import com.squareup.picasso.Picasso;
-
 import com.stashley.fitmate.R;
 import com.stashley.fitmate.vault.Author;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 

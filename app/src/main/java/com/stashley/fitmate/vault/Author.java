@@ -22,6 +22,9 @@ public class Author extends Resource {
   @Field
   String biography;
 
+  public Author() {
+  }
+
   public String name() {
     return name;
   }
@@ -38,4 +41,3 @@ public class Author extends Resource {
     return biography;
   }
 }
-

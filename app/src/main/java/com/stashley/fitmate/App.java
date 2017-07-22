@@ -4,7 +4,6 @@ import android.app.Application;
 
 import com.contentful.vault.SyncConfig;
 import com.contentful.vault.Vault;
-
 import com.stashley.fitmate.lib.ClientProvider;
 import com.stashley.fitmate.vault.BlogSpace;
 
@@ -28,9 +27,9 @@ public class App extends Application {
 
   public static void requestSync(boolean invalidate) {
     Vault.with(get(), BlogSpace.class).requestSync(
-        SyncConfig.builder()
-            .setClient(ClientProvider.get())
-            .setInvalidate(invalidate)
-            .build());
+            SyncConfig.builder()
+                    .setClient(ClientProvider.get())
+                    .setInvalidate(invalidate)
+                    .build());
   }
 }
