@@ -19,6 +19,9 @@ public class Category extends Resource {
 
   @Field Asset icon;
 
+  public Category() {
+  }
+
   public String title() {
     return title;
   }

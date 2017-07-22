@@ -14,7 +14,11 @@
         android:theme="@style/AppTheme">
 
         <!-- Blog stuff -->
-        <activity android:name=".activities.PostListActivity" />
+        <activity android:name=".activities.PostListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.stashley.fitmate.MainActivity" />
+        </activity>
         <activity android:name=".activities.PostActivity" />
         <activity
             android:name=".activities.LinkRouterActivity">
@@ -34,7 +38,11 @@
         <activity android:name=".DrawerActivity"></activity>
         <activity android:name=".MainActivity">
         </activity>
-        <activity android:name=".CreateEvent"></activity>
+        <activity android:name=".CreateEvent">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.stashley.fitmate.MainActivity" />
+        </activity>
         <activity android:name=".CreateAccountActivity" />
         <activity android:name=".LoginActivity">
 
