@@ -21,4 +21,8 @@
     <string name="url_feedback" formatted="false">https://support.contentful.com/hc/en-us/requests/new/</string>
     <string name="url_contact" formatted="false">https://support.contentful.com/hc/en-us/requests/new/</string>
     <string name="url_licensing" formatted="false">http://www.apache.org/licenses/LICENSE-2.0</string>
+
+    <!--AccountKit App ID and Client Token-->
+    <string name="FACEBOOK_APP_ID">1926865927584131</string>
+    <string name="ACCOUNT_KIT_CLIENT_TOKEN">356f2ae8ed62e8e35446198793f762cd</string>
 </resources>
