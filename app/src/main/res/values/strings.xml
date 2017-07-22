@@ -3,5 +3,13 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="header">Welcome to FitMate</string>
-    <string name="description">Find yourself a partner and workout together</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="start">Start</string>
+    <string name="title_slide1">Welcome to Fitmate</string>
+    <string name="desc_slide1">Your fit companion</string>
+    <string name="title_slide2">Events</string>
+    <string name="desc_slide2">View, Create and Join fitness events</string>
+    <string name="title_slide3">Ready</string>
+    <string name="desc_slide3">Let us get started</string>
 </resources>
