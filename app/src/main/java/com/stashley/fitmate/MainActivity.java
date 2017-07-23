@@ -48,13 +48,13 @@ public class MainActivity extends AppCompatActivity {
         mEvent_list.setLayoutManager(new LinearLayoutManager(this));
 
 
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
-        mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
-
-        mDrawerLayout.addDrawerListener(mToggle);
-        mToggle.syncState();
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+//        mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
+//
+//        mDrawerLayout.addDrawerListener(mToggle);
+//        mToggle.syncState();
+//
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
 //        eventListItems = new ArrayList<>();
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
         mEvent_list.setAdapter(firebaseRecyclerAdapter);
     }
 
-    public class EventViewHolder extends RecyclerView.ViewHolder {
+    public static class EventViewHolder extends RecyclerView.ViewHolder {
 
         View mView;
 
@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         public void setDate (String date) {
-            TextView event_date = (TextView) mView.findViewById(R.id.event_Date);
+            TextView event_date = (TextView) mView.findViewById(R.id.event_date);
             event_date.setText(date);
         }
 

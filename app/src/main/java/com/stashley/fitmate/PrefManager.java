@@ -11,7 +11,7 @@ public class PrefManager {
 
     SharedPreferences pref;
     SharedPreferences.Editor editor;
-    Context context;
+    Context _context;
 
     int PRIVATE_MODE = 0;
 
@@ -24,7 +24,7 @@ public class PrefManager {
         editor = pref.edit();
     }
 
-    public void setIsFirstTimeLaunch(boolean isFirstTime) {
+    public void setFirstTimeLaunch(boolean isFirstTime) {
         editor.putBoolean(IS_FIRST_TIME_LAUNCH, isFirstTime);
         editor.commit();
     }
