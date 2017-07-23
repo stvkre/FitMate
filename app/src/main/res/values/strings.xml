@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Fitmate</string>
+    <string name="app_name">FitMate</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
 
@@ -21,4 +21,17 @@
     <string name="url_feedback" formatted="false">https://support.contentful.com/hc/en-us/requests/new/</string>
     <string name="url_contact" formatted="false">https://support.contentful.com/hc/en-us/requests/new/</string>
     <string name="url_licensing" formatted="false">http://www.apache.org/licenses/LICENSE-2.0</string>
+
+    <string name="header">Welcome to FitMate</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="start">Start</string>
+    <string name="title_slide1">Welcome to Fitmate</string>
+    <string name="desc_slide1">The easiest way to connect through fitness events and activities!</string>
+    <string name="title_slide2">Events</string>
+    <string name="desc_slide2">View, Create and Join fitness events</string>
+    <string name="title_slide3">Fitness Blog</string>
+    <string name="desc_slide3">The latest articles on fitness and nutrition; tips and tricks</string>
+    <string name="title_slide4">Ready</string>
+    <string name="desc_slide4">Let us begin!</string>
 </resources>

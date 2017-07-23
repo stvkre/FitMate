@@ -94,7 +94,7 @@ public class CreateEvent extends AppCompatActivity {
 
             mProgress.show();
 
-            StorageReference filepath = mStorage.child("Event_Images").child(mImageUri.getLastPathSegment());
+            StorageReference filepath = mStorage.child("events").child(mImageUri.getLastPathSegment());
             filepath.putFile(mImageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {

@@ -6,84 +6,85 @@
     android:layout_height="match_parent"
     tools:context="com.stashley.fitmate.CreateEvent">
 
-    <ImageView
-        android:id="@+id/imageSelect"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="14dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/image"
-        app:srcCompat="@drawable/image" />
+        <ImageView
+            android:id="@+id/imageSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image"
+            app:srcCompat="@drawable/image" />
 
-    <EditText
-        android:id="@+id/titleField"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageSelect"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/input_outline"
-        android:ems="10"
-        android:hint="Name"
-        android:inputType="textPersonName"
-        android:padding="15dp" />
+        <EditText
+            android:id="@+id/titleField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageSelect"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/input_outline"
+            android:ems="10"
+            android:hint="Event Name"
+            android:inputType="textPersonName"
+            android:padding="15dp" />
 
-    <EditText
-        android:id="@+id/descField"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/titleField"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="14dp"
-        android:background="@drawable/input_outline"
-        android:ems="10"
-        android:hint="Description"
-        android:inputType="textMultiLine"
-        android:padding="15dp" />
-    <EditText
-        android:id="@+id/locationField"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/descField"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="14dp"
-        android:background="@drawable/input_outline"
-        android:ems="10"
-        android:hint="Location"
-        android:inputType="textMultiLine"
-        android:padding="15dp" />
+        <EditText
+            android:id="@+id/descField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleField"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/input_outline"
+            android:ems="10"
+            android:hint="Event Description"
+            android:inputType="textMultiLine"
+            android:padding="15dp" />
+        <EditText
+            android:id="@+id/locationField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/input_outline"
+            android:ems="10"
+            android:hint="Event Location"
+            android:inputType="textMultiLine"
+            android:padding="15dp"
+            android:layout_below="@+id/descField"
+            android:layout_alignLeft="@+id/descField"
+            android:layout_alignStart="@+id/descField"
+            android:layout_alignRight="@+id/descField"
+            android:layout_alignEnd="@+id/descField" />
 
-    <EditText
-        android:id="@+id/dateField"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/locationField"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="14dp"
-        android:background="@drawable/input_outline"
-        android:ems="10"
-        android:hint="Date"
-        android:inputType="textMultiLine"
-        android:padding="15dp" />
+        <EditText
+            android:id="@+id/dateField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/input_outline"
+            android:ems="10"
+            android:hint="Date"
+            android:inputType="textMultiLine"
+            android:padding="15dp"
+            android:layout_below="@+id/locationField"
+            android:layout_alignLeft="@+id/descField"
+            android:layout_alignStart="@+id/descField"
+            android:layout_alignRight="@+id/descField"
+            android:layout_alignEnd="@+id/descField" />
 
-
-    <Button
-        android:id="@+id/submitBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
-        android:text="CREATE"
-        android:textColor="@color/colorPrimaryLight"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="14dp" />
+        <Button
+            android:id="@+id/submitBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="CREATE"
+            android:textColor="@color/colorAccent"
+            android:layout_marginBottom="19dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
 </RelativeLayout>
