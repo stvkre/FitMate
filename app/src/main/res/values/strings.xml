@@ -2,7 +2,6 @@
     <string name="app_name">FitMate</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
-
     <string name="action_about">About</string>
 
     <!-- Error Dialog -->
