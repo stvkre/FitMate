@@ -1,6 +1,7 @@
 package com.stashley.fitmate;
 
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -30,20 +31,20 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView mEvent_list;
 
     private DatabaseReference mDatabase;
-
-    // Drawer activity
+    ProgressDialog progress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         mDatabase = FirebaseDatabase.getInstance().getReference().child("events");
 
+
         mEvent_list = (RecyclerView) findViewById(R.id.event_list);
         mEvent_list.setHasFixedSize(true);
         mEvent_list.setLayoutManager(new LinearLayoutManager(this));
-
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         mToggle.syncState();
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 
     // end drawer activity
@@ -81,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
         mEvent_list.setAdapter(firebaseRecyclerAdapter);
     }
+
 
     public static class EventViewHolder extends RecyclerView.ViewHolder {
 
