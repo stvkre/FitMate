@@ -4,7 +4,6 @@ import android.app.Application;
 
 import com.contentful.vault.SyncConfig;
 import com.contentful.vault.Vault;
-import com.facebook.accountkit.AccountKit;
 import com.stashley.fitmate.lib.ClientProvider;
 import com.stashley.fitmate.vault.BlogSpace;
 
@@ -14,7 +13,6 @@ public class App extends Application {
   @Override
   public void onCreate() {
     super.onCreate();
-    AccountKit.initialize(getApplicationContext());
     instance = this;
     requestSync();
   }

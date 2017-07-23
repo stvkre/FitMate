@@ -55,9 +55,9 @@
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
         android:layout_marginTop="53dp"
-        android:text="Fitmate"
+        android:text="FitMate"
         android:textColor="@color/colorPrimaryLight"
-        android:textSize="40dp"
+        android:textSize="50dp"
         android:textStyle="bold" />
 
 
