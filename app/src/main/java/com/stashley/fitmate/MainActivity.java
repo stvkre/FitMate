@@ -92,9 +92,10 @@ public class MainActivity extends AppCompatActivity {
             protected void populateViewHolder(EventViewHolder viewHolder, Event model, int position) {
 
                 viewHolder.setTitle(model.getTitle());
-                viewHolder.setDate(model.getDate());
                 viewHolder.setDescription(model.getDescription());
                 viewHolder.setLocation(model.getLocation());
+                viewHolder.setCategory(model.getCategory());
+                viewHolder.setDate(model.getDate());
                 viewHolder.setImage(getApplicationContext(), model.getImage());
 
             }
@@ -133,6 +134,12 @@ public class MainActivity extends AppCompatActivity {
         public void setDate (String date) {
             TextView event_date = (TextView) mView.findViewById(R.id.event_date);
             event_date.setText(date);
+        }
+
+
+        public void setCategory (String category) {
+            TextView event_category = (TextView) mView.findViewById(R.id.event_category);
+            event_category.setText(category);
         }
 
         public void setImage(Context ctx,String image) {
