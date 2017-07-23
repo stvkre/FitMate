@@ -77,14 +77,14 @@
             android:layout_alignRight="@+id/descField"
             android:layout_alignEnd="@+id/descField" />
 
-        <Button
-            android:id="@+id/submitBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:text="CREATE"
-            android:textColor="@color/colorAccent"
-            android:layout_marginBottom="19dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true" />
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:text="CREATE"
+        android:textColor="@color/colorPrimaryLight"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="14dp" />
 </RelativeLayout>

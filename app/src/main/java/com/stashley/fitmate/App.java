@@ -27,9 +27,9 @@ public class App extends Application {
 
   public static void requestSync(boolean invalidate) {
     Vault.with(get(), BlogSpace.class).requestSync(
-        SyncConfig.builder()
-            .setClient(ClientProvider.get())
-            .setInvalidate(invalidate)
-            .build());
+            SyncConfig.builder()
+                    .setClient(ClientProvider.get())
+                    .setInvalidate(invalidate)
+                    .build());
   }
 }

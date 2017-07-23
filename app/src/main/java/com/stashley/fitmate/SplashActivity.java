@@ -11,7 +11,7 @@ public class SplashActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
 //        start MainActivity
-        startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+        startActivity(new Intent(SplashActivity.this, IntroActivity.class));
 
 //        close SplashActivity
         finish();

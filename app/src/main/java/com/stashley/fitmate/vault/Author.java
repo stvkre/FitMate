@@ -41,4 +41,3 @@ public class Author extends Resource {
     return biography;
   }
 }
-

@@ -93,6 +93,7 @@ public class PostListActivity extends AbsListActivity<Post, PostListLoader.Resul
     finish();
 
   }
+
   @Override
   public boolean onOptionsItemSelected(MenuItem item) {
     if (item.getItemId() == android.R.id.home) {
@@ -101,4 +102,5 @@ public class PostListActivity extends AbsListActivity<Post, PostListLoader.Resul
     }
     return false;
   }
+
 }

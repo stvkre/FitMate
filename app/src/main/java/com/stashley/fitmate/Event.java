@@ -23,7 +23,7 @@ public class Event {
         this.image = image;
         this.location = location;
         this.date = date;
-        this.category = category;
+
     }
 
     public String getTitle() {
@@ -59,13 +59,7 @@ public class Event {
         this.location = location;
     }
 
-    public String getCategory() {
-        return category;
-    }
 
-    public void setCategory(String category) {
-        this.category = category;
-    }
 
     public String getDate() {
         return date;

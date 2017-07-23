@@ -7,13 +7,16 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="447dp"
-        android:orientation="vertical">
+        android:layout_height="479dp"
+        android:orientation="vertical"
+        android:weightSum="1">
 
         <ImageView
             android:id="@+id/event_image"
-            android:layout_width="match_parent"
+            android:layout_width="330dp"
             android:layout_height="205dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
             android:adjustViewBounds="true"
             android:scaleType="fitXY"
             android:src="@drawable/add_image" />
@@ -24,6 +27,7 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:text="Event Title"
+            android:layout_gravity="center"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -32,42 +36,35 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:text="Event Description"
             android:textSize="16sp"
-            android:text="Event Description" />
-
-        <TextView
-            android:id="@+id/event_category"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:textSize="16sp"
-            android:text="Event Category" />
-
-        <TextView
-            android:id="@+id/event_location"
-            android:layout_width="208dp"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:textSize="16sp"
-            android:text="Event Location" />
+            android:layout_weight="0.45" />
 
         <TextView
             android:id="@+id/event_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:textSize="16sp"
-            android:text="Event Date" />
+            android:text="Event Date"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/event_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Event Location"
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/joinBtn"
-            android:layout_width="match_parent"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:text="JOIN EVENT"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
             android:background="@color/colorPrimary"
-            android:textColor="@color/colorAccent"/>
-
+            android:text="JOIN EVENT"
+            android:textColor="@color/colorTextIcons" />
     </LinearLayout>
 
 </android.support.v7.widget.CardView>

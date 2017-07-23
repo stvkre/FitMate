@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -23,6 +24,7 @@ import butterknife.ButterKnife;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
     public static final String TAG = LoginActivity.class.getSimpleName();
+
     @Bind(R.id.registerTextView) TextView mRegisterTextView;
     @Bind(R.id.emailEditText) EditText mEmailEditText;
     @Bind(R.id.passwordEditText) EditText mPasswordEditText;
@@ -35,11 +37,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
         setContentView(R.layout.activity_login);
 
         mAuth = FirebaseAuth.getInstance();
 
         ButterKnife.bind(this);
+
         mRegisterTextView.setOnClickListener(this);
         mPasswordLoginButton.setOnClickListener(this);
 
@@ -88,12 +93,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if (view == mPasswordLoginButton) {
             loginWithPassword();
         }
+
     }
 
     private void createAuthProgressDialog() {
         mAuthProgressDialog = new ProgressDialog(this);
         mAuthProgressDialog.setTitle("Loading...");
-        mAuthProgressDialog.setMessage("Authenticating with Firebase...");
+        mAuthProgressDialog.setMessage("Logging you in...");
         mAuthProgressDialog.setCancelable(false);
     }
 
@@ -124,5 +130,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     }
                 });
 
+
     }
+
+
 }

@@ -1,6 +1,7 @@
 package com.stashley.fitmate;
 
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -33,16 +34,19 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         mDatabase = FirebaseDatabase.getInstance().getReference().child("events");
+
 
         mEvent_list = (RecyclerView) findViewById(R.id.event_list);
         mEvent_list.setHasFixedSize(true);
         mEvent_list.setLayoutManager(new LinearLayoutManager(this));
 
     }
+
 
     @Override
     protected void onStart() {
@@ -61,7 +65,6 @@ public class MainActivity extends AppCompatActivity {
                 viewHolder.setTitle(model.getTitle());
                 viewHolder.setDescription(model.getDescription());
                 viewHolder.setLocation(model.getLocation());
-                viewHolder.setCategory(model.getCategory());
                 viewHolder.setDate(model.getDate());
                 viewHolder.setImage(getApplicationContext(), model.getImage());
 
@@ -70,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
         mEvent_list.setAdapter(firebaseRecyclerAdapter);
     }
+
 
     public static class EventViewHolder extends RecyclerView.ViewHolder {
 
@@ -104,20 +108,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-        public void setCategory (String category) {
-            TextView event_category = (TextView) mView.findViewById(R.id.event_category);
-            event_category.setText(category);
-        }
-
         public void setImage(Context ctx,String image) {
             ImageView event_image = (ImageView) mView.findViewById(R.id.event_image);
             Picasso.with(ctx).load(image).into(event_image);
 
         }
-
-
-
-
 
     }
 
@@ -130,9 +125,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (mToggle.onOptionsItemSelected(item)) {
-            return true;
-        }
         if (item.getItemId() == R.id.action_add) {
             startActivity(new Intent(MainActivity.this, CreateEvent.class));
         }
@@ -159,5 +151,3 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 }
-
-
